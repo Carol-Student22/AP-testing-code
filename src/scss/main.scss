@@ -1,0 +1,33 @@
+body {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+}
+
+.container  {
+    height: 50rem;
+    width: 35rem;
+    background-color: azure;
+    border: 1px solid black;
+    border-radius: 3rem;
+}
+
+.content {
+    margin: 5rem;
+    font-size: 5rem;
+}
+
+.main-text {
+    font-size: 90%;
+}
+.sub-text {
+    font-size: 50%;
+}
+.text {
+    font-size: 30%;
+}

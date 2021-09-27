@@ -1,27 +1,28 @@
 const weatherChart = [
   {
-    weather: "sunny",
+    main: "sunny",
+    sub: "",
   },
   {
-    weather: "partial-cloudy",
+    main: "partial-cloudy",
   },
   {
-    weather: "cloudy",
+    main: "cloudy",
   },
   {
-    weather: "fog",
+    main: "fog",
   },
   {
-    weather: "drizzle",
+    main: "drizzle",
   },
   {
-    weather: "rain",
+    main: "rain",
   },
   {
-    weather: "storm",
+    main: "storm",
   },
   {
-    weather: "hurricane",
+    main: "hurricane",
   },
 ];
 

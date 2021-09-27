@@ -1,5 +1,1 @@
-import {weatherChart};
-
-function () {
-    
-}
+const cardcontainer = document.getElementsByClassName("container");
