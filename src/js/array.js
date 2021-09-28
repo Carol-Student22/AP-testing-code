@@ -1,73 +1,73 @@
 const weatherChart = [
   {
     main: "sunny",
-    sub: "test",
-    choices: {
-      a: "test",
-      b: "test",
+    sub: "A bright lightbulb.",
+    choice: {
+      a: "Stare At It",
+      b: "Look Away",
     },
-    preferchoice: "",
+    preferchoice: "b",
   },
   {
     main: "partial-cloudy",
-    sub: "f",
-    choices: {
-      a: "f",
-      b: "f",
+    sub: "Guess the screen has cracked.",
+    choice: {
+      a: "Follow the Clouds",
+      b: "Track the light",
     },
-    preferchoice: "",
+    preferchoice: "a",
   },
   {
     main: "cloudy",
-    sub: "f",
-    choices: {
-      a: "f",
-      b: "f",
+    sub: "A blinding sight. Guess someone put a blindfold over the sky.",
+    choice: {
+      a: "Cover Your Eyes",
+      b: "Run With the Wind",
     },
-    preferchoice: "",
+    preferchoice: "b",
   },
   {
     main: "fog",
-    sub: "f",
-    choices: {
-      a: "f",
-      b: "f",
+    sub: "Something smoking? Is it lethal?",
+    choice: {
+      a: "Inhale deeply",
+      b: "Find an exit",
     },
-    preferchoice: "",
+    preferchoice: "a",
   },
   {
     main: "drizzle",
-    sub: "f",
-    choices: {
-      a: "f",
-      b: "f",
+    sub: "A dew drop from the sky? Is this a liquid?",
+    choice: {
+      a: "Reach out your palm",
+      b: "Retreat to the corners",
     },
     preferchoice: "",
   },
   {
     main: "rain",
-    sub: "f",
-    choices: {
-      a: "f",
-      b: "f",
+    sub: "Guess someone's crying. Surprisingly quiet.",
+    choice: {
+      a: "",
+      b: "",
     },
     preferchoice: "",
   },
   {
     main: "storm",
-    sub: "f",
-    choices: {
-      a: "f",
-      b: "f",
+    sub: "They got the drums playing in the clouds.",
+    choice: {
+      a: "",
+      b: "",
     },
     preferchoice: "",
   },
   {
     main: "hurricane",
-    sub: "f",
-    choices: {
-      a: "f",
-      b: "f",
+    sub: "Lovely scenery. We still at the movies?",
+    choice: {
+      a: "",
+      b: "",
     },
     preferchoice: "",
   },
