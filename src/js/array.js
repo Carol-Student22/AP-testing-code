@@ -40,37 +40,67 @@ const weatherChart = [
     sub: "A dew drop from the sky? Is this a liquid?",
     choice: {
       a: "Reach out your palm",
-      b: "Retreat to the corners",
+      b: "Retreat for shelter and watch.",
     },
-    preferchoice: "",
+    preferchoice: "a",
   },
   {
     main: "rain",
-    sub: "Guess someone's crying. Surprisingly quiet.",
+    sub: "Guess someone's crying. It's surprisingly quiet.",
     choice: {
-      a: "",
-      b: "",
+      a: "Watch the puddles form.",
+      b: "Question why it's a different color.",
     },
-    preferchoice: "",
+    preferchoice: "a",
   },
   {
     main: "storm",
     sub: "They got the drums playing in the clouds.",
     choice: {
-      a: "",
-      b: "",
+      a: "Cover your ears.",
+      b: "Cover your mouth.",
     },
-    preferchoice: "",
+    preferchoice: "a",
   },
   {
     main: "hurricane",
     sub: "Lovely scenery. We still at the movies?",
     choice: {
-      a: "",
-      b: "",
+      a: "Hide behind closed doors.",
+      b: "Run out the door.",
     },
-    preferchoice: "",
+    preferchoice: "a",
   },
 ];
+const cardContainer = document.getElementsByClassName('card');
+function buildCard() {
+  // variable to store the HTML output
+  const output = [];
 
-export { weatherChart };
+  // for each question...
+  weatherChart.forEach((currentQuestion, questionNumber) => {
+    // variable to store the list of possible answers
+    const preferchoice = [];
+
+    // and for each available answer...
+    for (letter in currentQuestion.answers) {
+      // ...add an HTML radio button
+      preferchoice.push(
+        `///add code`
+      );
+    }
+
+    // add this question and its answers to the output
+    output.push(
+      `<div class="slide">
+          
+        </div>`
+    );
+  });
+
+  // finally combine our output list into one string of HTML and put it on the page
+  /// join --> combines elements of an array into a string
+  cardContainer.innerHTML = output.join("");
+} //End of buildQuiz
+
+buildCard();
