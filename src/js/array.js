@@ -77,8 +77,33 @@ const cardArray = [
 function buildCard() {
   //grab a random element from the array
   const random = cardArray[Math.floor(Math.random()*cardArray.length)];
-  console.log(random)
+  console.log(random);
+
   //have the element appear on screen with the proper class and tags
+  const card = document.getElementsByClassName(card);
+  cardArray.forEach((currentQuestion) => {
+    // and for each available answer...
+    for (letter in currentQuestion.choice) {
+      // ...add an HTML radio button
+      choice.push(
+        `<div class="btn-container">
+        <button class="btn">${currentQuestion.choice[letter]}</button>
+    </div>`
+      );
+    }
+
+    // add this question and its answers to the output
+    output.push(
+      `<div class="slide">
+          <div class="question"> ${currentQuestion.question} </div>
+          <div class="answers"> ${answers.join("")} </div>
+        </div>`
+    );
+  });
+
+  // finally combine our output list into one string of HTML and put it on the page
+  /// join --> combines elements of an array into a string
+  quizContainer.innerHTML = output.join("");
 
   //grab the button tags and stuff
 
