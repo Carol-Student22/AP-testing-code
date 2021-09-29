@@ -73,13 +73,20 @@ const cardArray = [
   },
 ];
 
-let currentQuestion = 0;
 
-function checkChoice(choice) {
-  let correctChoice = cardArray[choice].preferchoice;
-  if (choice !== correctChoice) {
-    console.log("Incorrect");
-  } else {
-    console.log("Correct");
-  }
+function buildCard() {
+  //grab a random element from the array
+  const random = cardArray[Math.floor(Math.random()*cardArray.length)];
+  console.log(random)
+  //have the element appear on screen with the proper class and tags
+
+  //grab the button tags and stuff
+
+  //check if the selected btn is the preferchoice of option
+
+  //if it is the preferchoice then add to the answers correct, else don't add
+  
+
 }
+
+buildCard();

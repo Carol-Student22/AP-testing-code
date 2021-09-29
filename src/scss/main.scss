@@ -53,22 +53,12 @@ button {
   flex-direction: row;
 }
 
-.btn-a,
-.btn-b {
+.btn {
   background-color: rgb(190, 190, 190);
 }
 
-.btn-a:hover,
-.btn-b:hover {
+.btn:hover {
   background-color: rgb(233, 233, 233);
-}
-
-#btn-end {
-  background-color: rgb(209, 209, 209);
-}
-
-#btn-end:hover {
-  background-color: rgb(139, 139, 139);
 }
 
 .text-container {
