@@ -1,4 +1,4 @@
-const weatherChart = [
+const cardArray = [
   {
     main: "sunny",
     sub: "A bright lightbulb.",
@@ -72,35 +72,14 @@ const weatherChart = [
     preferchoice: "a",
   },
 ];
-const cardContainer = document.getElementsByClassName('card');
-function buildCard() {
-  // variable to store the HTML output
-  const output = [];
 
-  // for each question...
-  weatherChart.forEach((currentQuestion, questionNumber) => {
-    // variable to store the list of possible answers
-    const preferchoice = [];
+let currentQuestion = 0;
 
-    // and for each available answer...
-    for (letter in currentQuestion.answers) {
-      // ...add an HTML radio button
-      preferchoice.push(
-        `///add code`
-      );
-    }
-
-    // add this question and its answers to the output
-    output.push(
-      `<div class="slide">
-          
-        </div>`
-    );
-  });
-
-  // finally combine our output list into one string of HTML and put it on the page
-  /// join --> combines elements of an array into a string
-  cardContainer.innerHTML = output.join("");
-} //End of buildQuiz
-
-buildCard();
+function checkChoice(choice) {
+  let correctChoice = cardArray[choice].preferchoice;
+  if (choice !== correctChoice) {
+    console.log("Incorrect");
+  } else {
+    console.log("Correct");
+  }
+}
