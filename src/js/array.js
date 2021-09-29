@@ -81,29 +81,26 @@ function buildCard() {
 
   //have the element appear on screen with the proper class and tags
   const card = document.getElementsByClassName(card);
-  cardArray.forEach((currentQuestion) => {
+
+  const output = [];
+  const answer = [];
+  cardArray.forEach((currentCard, cardNumber) => {
     // and for each available answer...
-    for (letter in currentQuestion.choice) {
-      // ...add an HTML radio button
-      choice.push(
-        `<div class="btn-container">
-        <button class="btn">${currentQuestion.choice[letter]}</button>
-    </div>`
+    for (letter in currentCard.choice) {
+      answer.push(
+        ``
       );
     }
 
     // add this question and its answers to the output
     output.push(
-      `<div class="slide">
-          <div class="question"> ${currentQuestion.question} </div>
-          <div class="answers"> ${answers.join("")} </div>
-        </div>`
+      `<div class="text-container">
+        <h1 class="main-text">${currentCard.main}</h1>
+        <h2 class="sub-text">${currentCard.sub}.</h2>
+      </div>
+      <div class="btn-container">${answer.join("")}</div>`
     );
   });
-
-  // finally combine our output list into one string of HTML and put it on the page
-  /// join --> combines elements of an array into a string
-  quizContainer.innerHTML = output.join("");
 
   //grab the button tags and stuff
 
