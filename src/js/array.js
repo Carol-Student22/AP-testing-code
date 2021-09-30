@@ -73,42 +73,10 @@ const cardArray = [
   },
 ];
 
+const DOMSelectors = {
+  choicebutton: document.getElementsByClassName("btn"),
+  cardHTML: document.getElementsByClassName("card"),
+};
 
-function buildCard() {
-  //grab a random element from the array
-  const random = cardArray[Math.floor(Math.random()*cardArray.length)];
-  console.log(random);
-
-  //have the element appear on screen with the proper class and tags
-  const card = document.getElementsByClassName(card);
-
-  const output = [];
-  const answer = [];
-  cardArray.forEach((currentCard, cardNumber) => {
-    // and for each available answer...
-    for (letter in currentCard.choice) {
-      answer.push(
-        ``
-      );
-    }
-
-    // add this question and its answers to the output
-    output.push(
-      `<div class="text-container">
-        <h1 class="main-text">${currentCard.main}</h1>
-        <h2 class="sub-text">${currentCard.sub}.</h2>
-      </div>
-      <div class="btn-container">${answer.join("")}</div>`
-    );
-  });
-
-  //grab the button tags and stuff
-
-  //check if the selected btn is the preferchoice of option
-
-  //if it is the preferchoice then add to the answers correct, else don't add
-  
-
-}
-
-buildCard();
+export { DOMSelectors };
+export { cardArray };
