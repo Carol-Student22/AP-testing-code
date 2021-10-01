@@ -27,4 +27,5 @@ function buildCard() {
   //if it is the preferchoice then add to the answers correct, else don't add
 }
 
+choicebutton.onclick = function () {};
 buildCard();
