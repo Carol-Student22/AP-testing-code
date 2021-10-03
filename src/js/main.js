@@ -57,12 +57,12 @@ function generateList() {
   document.body.appendChild(listTitle);
 
   for (i = 0; i < array.length; i++) {
-    let temp;
-    temp = document.createElement("li");
-    temp.className = "generated-list-item";
-    temp.innerHTML = array[i];
-    temp.className = "textbox";
-    document.getElementsByTagName("body")[0].appendChild(temp);
+    let sub;
+    sub = document.createElement("li");
+    sub.className = "generated-list-item";
+    sub.innerHTML = array[i];
+    sub.className = "textbox";
+    document.getElementsByTagName("body")[0].appendChild(sub);
 
     console.log("Full List Generation Complete");
   }
