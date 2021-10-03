@@ -51,9 +51,9 @@ generatelistBtn.addEventListener("click", generateList);
 function generateList() {
   console.log("Generating Full List of Items");
   const listTitle = document.createElement("p");
-  listTitle.innerHTML = "Storage List";
+  listTitle.innerHTML = "Generating Storage List... ";
   listTitle.className = "generated-list-title";
-  listTitle.className = "textbox";
+  listTitle.className = "textbox-array";
   document.body.appendChild(listTitle);
 
   for (i = 0; i < array.length; i++) {
@@ -61,7 +61,7 @@ function generateList() {
     sub = document.createElement("li");
     sub.className = "generated-list-item";
     sub.innerHTML = array[i];
-    sub.className = "textbox";
+    sub.className = "textbox-array";
     document.getElementsByTagName("body")[0].appendChild(sub);
 
     console.log("Full List Generation Complete");
@@ -70,7 +70,7 @@ function generateList() {
   if (array.length === 0) {
     const arrayElement = document.createElement("p");
     arrayElement.className = "list-empty";
-    arrayElement.className = "textbox";
+    arrayElement.className = "textbox-array";
     arrayElement.innerHTML = "System Storage is Empty";
     document.body.appendChild(arrayElement);
 

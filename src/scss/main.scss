@@ -1,15 +1,95 @@
+* {
+  font-family: "Annie Use Your Telescope", cursive;
+  transition: 0.1s;
+}
+
 body {
-  background-color: red;
-  padding: 5rem;
+  background-color: rgb(210, 223, 205);
+  padding: 4rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  border: 0.5rem solid rgb(145, 76, 76);
+  border-radius: 2rem;
+  background-color: rgb(240, 212, 212);
+  margin: 0.75rem auto;
+  padding: 0rem 1.5rem;
+
+  font-size: 2rem;
+}
+.btn:hover {
+  background-color: rgb(234, 245, 237);
+  border-color: rgb(128, 42, 42);
+  color: rgb(49, 2, 2);
+}
+
+.main-text {
+  font-size: 3rem;
+  line-height: 3rem;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+}
+.sub-text {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  color: rgb(150, 158, 149);
 }
 
 .card-container {
-  background-color: blue;
-  width: 100%;
   height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.textbox {
-  background-color: bisque;
+.card {
+  background-color: rgb(241, 240, 236);
+  width: 55rem;
+  border: 0.5rem solid rgb(81, 143, 84);
+  border-radius: 1rem;
+  margin: 1rem 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-da
+.textbox {
+  width: 55rem;
+  background-color: rgb(231, 226, 216);
+  padding: 5px;
+  margin: 0.5rem;
+
+  border: 0.5rem solid rgb(81, 143, 84);
+  border-radius: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+}
+
+.textbox-array {
+  width: 55rem;
+  background-color: rgb(231, 226, 216);
+  padding: 5px;
+  margin: 0.5rem;
+
+  border: 0.5rem solid rgb(161, 42, 42);
+  border-radius: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+}
