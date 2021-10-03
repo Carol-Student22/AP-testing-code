@@ -41,6 +41,7 @@ function grabRandom() {
 
   const newElement = document.createElement("p");
   newElement.innerHTML = randomNum;
+  newElement.className = "textbox";
   document.body.appendChild(newElement);
 }
 
@@ -60,6 +61,7 @@ function generateList() {
     temp = document.createElement("li");
     temp.className = "generated-list-item";
     temp.innerHTML = array[i];
+    temp.className = "textbox";
     document.getElementsByTagName("body")[0].appendChild(temp);
 
     console.log("Full List Generation Complete");
