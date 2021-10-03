@@ -1,112 +1,77 @@
-const cardArray = [
-  {
-    main: "sunny",
-    sub: "A bright lightbulb.",
-    choice: {
-      a: "Stare At It",
-      b: "Look Away",
-    },
-    preferchoice: "b",
-  },
-  {
-    main: "partial-cloudy",
-    sub: "Guess the screen has cracked.",
-    choice: {
-      a: "Follow the Clouds",
-      b: "Track the light",
-    },
-    preferchoice: "a",
-  },
-  {
-    main: "cloudy",
-    sub: "A blinding sight. Guess someone put a blindfold over the sky.",
-    choice: {
-      a: "Cover Your Eyes",
-      b: "Run With the Wind",
-    },
-    preferchoice: "b",
-  },
-  {
-    main: "fog",
-    sub: "Something smoking? Is it lethal?",
-    choice: {
-      a: "Inhale deeply",
-      b: "Find an exit",
-    },
-    preferchoice: "a",
-  },
-  {
-    main: "drizzle",
-    sub: "A dew drop from the sky? Is this a liquid?",
-    choice: {
-      a: "Reach out your palm",
-      b: "Retreat for shelter and watch.",
-    },
-    preferchoice: "a",
-  },
-  {
-    main: "rain",
-    sub: "Guess someone's crying. It's surprisingly quiet.",
-    choice: {
-      a: "Watch the puddles form.",
-      b: "Question why it's a different color.",
-    },
-    preferchoice: "a",
-  },
-  {
-    main: "storm",
-    sub: "They got the drums playing in the clouds.",
-    choice: {
-      a: "Cover your ears.",
-      b: "Cover your mouth.",
-    },
-    preferchoice: "a",
-  },
-  {
-    main: "hurricane",
-    sub: "Lovely scenery. We still at the movies?",
-    choice: {
-      a: "Hide behind closed doors.",
-      b: "Run out the door.",
-    },
-    preferchoice: "a",
-  },
-];
+const array = [];
 
+const addBtn = document.getElementById("add-btn");
+addBtn.addEventListener("click", inputStuffFunction);
 
-function grabArray() {
-  //grab a random element from the array
-  const random = cardArray[Math.floor(Math.random() * cardArray.length)];
-  console.log(random);
-  console.log("Grabbing random array complete");
+const submitBtn = document.getElementById("submit-btn");
+submitBtn.addEventListener("click", checkArrayGenerate);
+
+/// Adding Numbers
+function inputStuffFunction() {
+  while (true) {
+    let randomInput = prompt(
+      "Random Element Insert Sequence. Type `quit`, leave it blank, or press `cancel` to stop adding additional info"
+    );
+    if (randomInput === "quit" || randomInput === null || randomInput === ``) {
+      break;
+    }
+    array.push(randomInput);
+    console.log(array);
+  }
 }
 
-  //have the element appear on screen with the proper class and tags
-function cardHTML() {
-  const card = document.createElement("li");
-  card.innerHTML = `
-    <div class="text-container">
-        <h1 class="main-text">Sunny</h1>
-        <h2 class="sub-text">A bright lightbulb.</h2>
-    </div>
-    <div class="btn-container">
-        <button class="btn">Stare at it</button>
-        <button class="btn">Look Away</button>
-    </div>  
-
-  `;
+function checkArrayGenerate() {
+  if (array.length === 0) {
+    console.log(
+      "Unable to Generate a Random Item from the Storage System. [AKA. The Storage is Empty]"
+    );
+    const arrayElement = document.createElement("p");
+    arrayElement.className = "textbox";
+    arrayElement.innerHTML =
+      "Unable to Complete Task. It Seems the Storage is Empty.";
+    document.body.appendChild(arrayElement);
+  } else {
+    grabRandom();
+  }
 }
 
-  //grab the button tags and stuff
+function grabRandom() {
+  let randomNum = array[Math.floor(Math.random() * array.length)];
+  console.log(randomNum);
 
-  //check if the selected btn is the preferchoice of option
+  const newElement = document.createElement("p");
+  newElement.innerHTML = randomNum;
+  document.body.appendChild(newElement);
+}
 
-  //if it is the preferchoice then add to the answers correct, else don't add
+const generatelistBtn = document.getElementById("generate-list");
+generatelistBtn.addEventListener("click", generateList);
 
-<<<<<<< HEAD
-choicebutton.onclick = function () {};
-buildCard();
-=======
+function generateList() {
+  console.log("Generating Full List of Items");
+  const listTitle = document.createElement("p");
+  listTitle.innerHTML = "Storage List";
+  listTitle.className = "generated-list-title";
+  listTitle.className = "textbox";
+  document.body.appendChild(listTitle);
 
+  for (i = 0; i < array.length; i++) {
+    let temp;
+    temp = document.createElement("li");
+    temp.className = "generated-list-item";
+    temp.innerHTML = array[i];
+    document.getElementsByTagName("body")[0].appendChild(temp);
 
->>>>>>> 6a2fa1427a91fdbdc574018f40b8aec16cdf2ed3
+    console.log("Full List Generation Complete");
+  }
+
+  if (array.length === 0) {
+    const arrayElement = document.createElement("p");
+    arrayElement.className = "list-empty";
+    arrayElement.className = "textbox";
+    arrayElement.innerHTML = "System Storage is Empty";
+    document.body.appendChild(arrayElement);
+
+    console.log("The Array/Storage is Currently Empty");
+  }
+}
